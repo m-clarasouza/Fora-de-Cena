@@ -1,6 +1,330 @@
-/*Estilos globais*/
+/*Início (index.html)*/
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f6efe6;
+  color: #11202c;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.logo-marca {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.55rem;
+  font-weight: 500;
+  line-height: 1;
+  color: #11202c;
+  text-decoration: none;
+}
+
+.logo-cena {
+  font-style: italic;
+  color: #d95d24;
+  font-weight: 500;
+}
+
+.logo-sub {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #5a6772;
+}
+
+/* header */
+.site-header {
+  background-color: #f6efe6;
+  border-color: rgba(17, 32, 44, 0.08) !important;
+}
+
+.navbar-nav,
+.navbar-nav .nav-item {
+  list-style: none;
+}
+
+.nav-custom {
+  color: #3a4650;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.45rem 0.85rem !important;
+  border-radius: 999px;
+  white-space: nowrap;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.nav-custom:hover {
+  color: #d95d24;
+}
+
+.nav-pill.active,
+.nav-custom.active {
+  background-color: #10202b !important;
+  color: #ffffff !important;
+  border-radius: 999px;
+  padding: 0.45rem 1rem !important;
+}
+
+/* Botão Dark Mode circular */
+.btn-theme-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(17, 32, 44, 0.16);
+  background-color: transparent;
+  color: #11202c;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  line-height: 1;
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+
+.btn-theme-circle:hover {
+  background-color: rgba(17, 32, 44, 0.06);
+  border-color: rgba(17, 32, 44, 0.3);
+}
+
+@media (min-width: 992px) {
+  .btn-theme-circle {
+    transform: translateX(-12px);
+  }
+
+  .btn-theme-circle:active {
+    transform: translateX(-12px) scale(0.96);
+  }
+}
+
+/* hero/img */
+.hero-section {
+  min-height: 78vh;
+  position: relative;
+  color: #ffffff;
+  /* Se o style.css estiver dentro de uma pasta 'css/', altere para url('../img/porto.inicio.avif') */
+  background:
+    linear-gradient(
+      90deg,
+      rgba(6, 12, 20, 0.86) 0%,
+      rgba(6, 12, 20, 0.56) 52%,
+      rgba(6, 12, 20, 0.25) 100%
+    ),
+    url('/img/porto.inicio.avif') center center / cover no-repeat;
+}
+
+.hero-kicker {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.hero-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2.4rem, 4.8vw, 4rem);
+  font-weight: 500;
+  line-height: 1.08;
+  color: #ffffff;
+}
+
+.hero-title-accent {
+  font-style: italic;
+  color: #e06328;
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.btn-cta-orange {
+  background-color: #d95d24;
+  color: #ffffff !important;
+  border: none;
+  border-radius: 999px;
+  padding: 0.72rem 1.5rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.btn-cta-orange:hover {
+  background-color: #c24f1a;
+  color: #ffffff !important;
+}
+
+.btn-cta-outline {
+  background-color: rgba(12, 20, 30, 0.65);
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 999px;
+  padding: 0.72rem 1.5rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.btn-cta-outline:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+/* Botão Dark Mode circular */
+.btn-theme-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(17, 32, 44, 0.16);
+  background-color: transparent;
+  color: #11202c;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  line-height: 1;
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+
+.btn-theme-circle:hover {
+  background-color: rgba(17, 32, 44, 0.06);
+  border-color: rgba(17, 32, 44, 0.3);
+}
+
+@media (min-width: 992px) {
+  .btn-theme-circle {
+    transform: translateX(-12px);
+  }
+
+  .btn-theme-circle:active {
+    transform: translateX(-12px) scale(0.96);
+  }
+}
 
 
+/* DARK MODE */
+[data-bs-theme="dark"] body {
+  background-color: #0b131e;
+  color: #f3efe8;
+}
 
+[data-bs-theme="dark"] .site-header {
+  background-color: #0b131e;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
 
-/*Página do catálogo (catalogue.html)*/
+[data-bs-theme="dark"] .logo-marca {
+  color: #f3efe8;
+}
+
+[data-bs-theme="dark"] .logo-cena {
+  color: #e86f38;
+}
+
+[data-bs-theme="dark"] .logo-sub {
+  color: #9aa8b6;
+}
+
+[data-bs-theme="dark"] .nav-custom {
+  color: #c5d0da;
+}
+
+[data-bs-theme="dark"] .nav-custom:hover {
+  color: #e86f38;
+}
+
+[data-bs-theme="dark"] .nav-pill.active,
+[data-bs-theme="dark"] .nav-custom.active {
+  background-color: #e86f38 !important;
+  color: #ffffff !important;
+}
+
+[data-bs-theme="dark"] .btn-theme-circle {
+  border-color: rgba(255, 255, 255, 0.18);
+  color: #f3efe8;
+}
+
+[data-bs-theme="dark"] .btn-theme-circle:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+/*  FOOTER */
+footer.site-footer,
+footer.site-footer[data-bs-theme],
+[data-bs-theme="dark"] footer.site-footer,
+[data-bs-theme="light"] footer.site-footer {
+  background-color: #091320 !important;
+  color: #e6ecf2 !important;
+}
+
+footer.site-footer .logo-marca,
+footer.site-footer .footer-logo {
+  color: #ffffff !important;
+  font-size: 1.75rem;
+}
+
+footer.site-footer .logo-cena {
+  color: #e86f38 !important;
+}
+
+footer.site-footer .footer-desc {
+  color: #8f9ead !important;
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+footer.site-footer .footer-heading {
+  color: #6f8091 !important;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+footer.site-footer a,
+footer.site-footer .footer-link {
+  color: #d5dde5 !important;
+  text-decoration: none !important;
+  font-size: 0.88rem;
+  transition: color 0.2s ease;
+}
+
+footer.site-footer a:hover,
+footer.site-footer .footer-link:hover {
+  color: #e86f38 !important;
+  text-decoration: none !important;
+}
+
+footer.site-footer .footer-text-muted {
+  color: #8f9ead !important;
+  font-size: 0.88rem;
+}
+
+footer.site-footer .footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+footer.site-footer .footer-copy {
+  color: #6f8091 !important;
+  font-size: 0.78rem;
+}
+/* Pílula escura no item ativo (tema claro) */
+.navbar-nav .nav-link.nav-pill.active,
+.navbar-nav .nav-link.nav-custom.active {
+  background-color: #10202b !important;
+  color: #ffffff !important;
+  border-radius: 999px;
+  padding: 0.45rem 1rem !important;
+}
+
+/* Ajuste quando o Dark Mode estiver ativo */
+[data-bs-theme="dark"] .navbar-nav .nav-link.nav-pill.active,
+[data-bs-theme="dark"] .navbar-nav .nav-link.nav-custom.active {
+  background-color: #e86f38 !important;
+  color: #ffffff !important;
+}
