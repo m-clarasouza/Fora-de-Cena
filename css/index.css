@@ -1,0 +1,84 @@
+/* página inicial */
+.hero-section {
+  min-height: 78vh;
+  position: relative;
+  color: var(--texto-claro);
+  background:
+    linear-gradient(
+      90deg,
+      rgba(9, 19, 40, 0.88) 0%,
+      rgba(9, 19, 40, 0.58) 55%,
+      rgba(9, 19, 40, 0.28) 100%
+    ),
+    url('/img/porto.inicio.avif') center center / cover no-repeat;
+}
+
+.hero-content {
+  max-width: 680px;
+}
+
+.hero-kicker {
+  font-family: var(--font-texto);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--areia);
+}
+
+.hero-title {
+  font-family: var(--font-titulos);
+  font-size: clamp(2.4rem, 4.8vw, 4rem);
+  font-weight: 500;
+  line-height: 1.08;
+  color: var(--texto-claro);
+}
+
+.hero-title-accent {
+  font-style: italic;
+  color: var(--terracota);
+}
+
+.hero-subtitle {
+  font-family: var(--font-texto);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--texto-claro) !important;
+}
+
+.btn-cta-orange {
+  background-color: var(--terracota);
+  color: var(--texto-claro) !important;
+  border: none;
+  border-radius: 999px;
+  padding: 0.72rem 1.5rem;
+  font-family: var(--font-texto);
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: var(--sombra);
+}
+
+.btn-cta-orange:hover {
+  background-color: var(--tinta);
+  color: var(--texto-claro) !important;
+}
+
+.btn-cta-outline {
+  background-color: rgba(9, 19, 40, 0.65);
+  color: var(--texto-claro) !important;
+  border: 1px solid var(--linha);
+  border-radius: 999px;
+  padding: 0.72rem 1.5rem;
+  font-family: var(--font-texto);
+  font-size: 0.88rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.btn-cta-outline:hover {
+  background-color: var(--azulejo);
+  color: var(--texto-claro) !important;
+  border-color: var(--azulejo);
+}
+ 
