@@ -10,7 +10,7 @@
       rgba(9, 19, 40, 0.58) 55%,
       rgba(9, 19, 40, 0.28) 100%
     ),
-    url('/img/porto.inicio.avif') center center / cover no-repeat;
+    url('/img/porto.inicio.jpg') center center / cover no-repeat;
 }
 
 .hero-content {
