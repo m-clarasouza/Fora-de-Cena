@@ -1,0 +1,392 @@
+/* Margens laterais iguais às do header e do footer */
+.contentor {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 768px) {
+  .contentor {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .contentor {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+/* Espaço vertical entre as secções da página */
+.titulo-pagina,
+.quem-somos,
+.historia,
+.numeros,
+.valores,
+.equipa {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* Texto pequeno em maiúsculas que aparece por cima dos títulos */
+.etiqueta {
+  font-family: var(--font-texto);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--terracota);
+  margin-bottom: 1rem;
+}
+
+/* Títulos das secções (h2) */
+.titulo-seccao {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--noite); /* guia: --noite = texto sobre fundo claro */
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 992px) {
+  .titulo-seccao {
+    font-size: 3rem;
+  }
+}
+
+/* Tira as bolinhas/números e o recuo das listas <ol> e <ul> */
+.lista-limpa {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Itálicos de destaque a terracota (guia de estilo) */
+.titulo-pagina em,
+.missao-texto em {
+  color: var(--terracota);
+}
+
+
+/* ---------- 1. TÍTULO DA PÁGINA ---------- */
+
+/* Menos espaço entre o título e a foto que vem logo a seguir */
+.titulo-pagina {
+  padding-bottom: 0;
+}
+
+.quem-somos {
+  padding-top: 1.5rem;
+}
+
+.titulo-pagina h1 {
+  font-size: 2.2rem;
+  font-weight: 400;
+  max-width: 20ch; /* corta a linha a ~20 letras para o título não ficar muito comprido */
+}
+
+@media (min-width: 992px) {
+  .titulo-pagina h1 {
+    font-size: 3.5rem;
+  }
+
+  /* Empurra o título para dentro, para alinhar com o início da foto
+     (a foto ocupa 80% da coluna e está encostada à direita) */
+  .titulo-pagina .etiqueta,
+  .titulo-pagina h1 {
+    margin-left: 12%;
+  }
+}
+
+
+/* ---------- 2. QUEM SOMOS ---------- */
+
+/* Foto grande: ocupa a largura da coluna e tem cantos arredondados */
+.foto-principal {
+  width: 80%;
+  height: auto;
+  border-radius: var(--raio); /* 16px, como pede o guia para cartões */
+  object-fit: cover;
+  box-shadow: var(--sombra);
+}
+
+/* No computador (foto e texto lado a lado): a foto encosta à direita
+   da sua coluna, para ficar perto do texto */
+@media (min-width: 992px) {
+  .foto-principal {
+    display: block;
+    margin-left: auto;
+  }
+
+  /* O texto fica centrado na vertical, à altura do meio da foto */
+  .texto-quem-somos {
+    align-self: center;
+  }
+}
+
+.texto-quem-somos p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--texto-suave);
+}
+
+
+/* ---------- 3. HISTÓRIA ---------- */
+
+.cartao-historia {
+  height: 100%; /* os 3 cartões ficam com a mesma altura */
+  padding: 1.5rem;
+  background-color: var(--cartao);
+  border: 1px solid var(--linha);
+  border-radius: var(--raio);
+}
+
+/* Número grande e clarinho (1, 2, 3) */
+.numero-historia {
+  display: block;
+  font-family: var(--font-titulos);
+  font-size: 3.5rem;
+  font-weight: 300;
+  line-height: 1;
+  color: var(--terracota);
+  opacity: 0.35; /* 35% visível = terracota bem suave */
+  margin-bottom: 1rem;
+}
+
+.cartao-historia h3 {
+  color: var(--noite);
+}
+
+.cartao-historia p {
+  color: var(--texto-suave);
+  margin-bottom: 0;
+}
+
+
+/* ---------- 4. MISSÃO (faixa escura) ---------- */
+
+.missao {
+  background-color: var(--noite);
+  color: var(--texto-claro);
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  text-align: center;
+}
+
+.missao-texto {
+  font-family: var(--font-titulos);
+  font-size: 1.6rem;
+  line-height: 1.4;
+  max-width: 40ch;
+  margin: 0 auto; /* centra o parágrafo */
+}
+
+@media (min-width: 992px) {
+  .missao-texto {
+    font-size: 2.2rem;
+  }
+}
+
+
+/* ---------- 5. NÚMEROS ---------- */
+
+/* Faixa cor de areia a toda a largura, com linha em baixo */
+.numeros {
+  background-color: var(--areia);
+  border-bottom: 1px solid var(--linha);
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* Cada número: alinhado à esquerda, com espaço à volta */
+.numero {
+  text-align: left;
+  padding: 2rem 1rem;
+  border-right: 1px solid var(--linha); /* linha a separar os números */
+}
+
+/* O último número não precisa de linha à direita */
+.numero:last-child {
+  border-right: none;
+}
+
+.numero-valor {
+  font-family: var(--font-titulos);
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--noite);
+  margin-bottom: 0.75rem;
+}
+
+/* Legenda pequena, em maiúsculas e com letras afastadas */
+.numero-legenda {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--texto-suave);
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .numero {
+    padding: 2.5rem 2rem;
+  }
+
+  .numero-valor {
+    font-size: 4rem;
+  }
+}
+
+
+/* ---------- 6. VALORES ---------- */
+
+/* Linha fina por cima de cada valor */
+.valor {
+  border-top: 2px solid var(--noite);
+  padding-top: 1.5rem;
+}
+
+.valor-numero {
+  font-family: var(--font-titulos);
+  font-style: italic;
+  font-size: 2.5rem;
+  line-height: 1;
+  color: var(--terracota);
+  margin-bottom: 1rem;
+}
+
+.valor h3 {
+  color: var(--noite);
+}
+
+.valor p:last-child {
+  color: var(--texto-suave);
+}
+
+
+/* ---------- 7. EQUIPA ---------- */
+
+.cartao-equipa {
+  height: 100%;
+  padding: 1.5rem;
+  text-align: center;
+  background-color: var(--cartao);
+  border: 1px solid var(--linha);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+}
+
+/* Fotografias da equipa redondas (círculo) */
+.foto-equipa {
+  width: 96px;
+  height: 96px;
+  object-fit: cover; /* corta a foto sem a deformar */
+  border-radius: 50%; /* 50% = círculo perfeito */
+  margin-bottom: 1rem;
+}
+
+.cartao-equipa h3 {
+  font-size: 1.25rem;
+  color: var(--noite); /* quase preto, cor do guia */
+}
+
+.bio {
+  font-size: 0.9rem;
+  color: var(--texto-suave);
+  margin-bottom: 0;
+}
+
+
+/* ---------- 8. CONVITE PARA CONTACTO ---------- */
+
+.convite {
+  background-color: var(--azulejo);
+  color: var(--texto-claro);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* No telemóvel: título e botão um por baixo do outro.
+   No computador: lado a lado. */
+.convite-conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+@media (min-width: 992px) {
+  .convite-conteudo {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.convite h2 {
+  margin-bottom: 0;
+}
+
+/* Botão principal: terracota e em forma de "pill" */
+.botao-principal {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  border-radius: 999px;
+  background-color: var(--terracota);
+  color: var(--texto-claro);
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.botao-principal:hover {
+  background-color: var(--tinta);
+  color: var(--texto-claro);
+}
+
+
+/* ---------- TEMA ESCURO ---------- */
+/* Quando o botão 🌙 muda o tema, os cartões ficam escuros
+   para o texto claro continuar a ler-se bem. */
+
+[data-bs-theme="dark"] .cartao-historia,
+[data-bs-theme="dark"] .cartao-equipa {
+  background-color: rgba(245, 238, 224, 0.06);
+  border-color: rgba(245, 238, 224, 0.15);
+}
+
+[data-bs-theme="dark"] .texto-quem-somos p,
+[data-bs-theme="dark"] .cartao-historia p,
+[data-bs-theme="dark"] .numero-legenda,
+[data-bs-theme="dark"] .valor p:last-child,
+[data-bs-theme="dark"] .bio {
+  color: var(--linha);
+}
+
+/* Títulos e números escuros (--noite) passam a claros no tema escuro */
+[data-bs-theme="dark"] .titulo-seccao,
+[data-bs-theme="dark"] .cartao-historia h3,
+[data-bs-theme="dark"] .valor h3,
+[data-bs-theme="dark"] .cartao-equipa h3,
+[data-bs-theme="dark"] .numero-valor {
+  color: var(--texto-claro);
+}
+
+[data-bs-theme="dark"] .numeros {
+  background-color: rgba(245, 238, 224, 0.06);
+  border-bottom-color: rgba(245, 238, 224, 0.15);
+}
+
+[data-bs-theme="dark"] .numero {
+  border-right-color: rgba(245, 238, 224, 0.15);
+}
+
+[data-bs-theme="dark"] .valor {
+  border-top-color: var(--terracota);
+}
+
+[data-bs-theme="dark"] .missao {
+  border-top: 1px solid rgba(245, 238, 224, 0.14);
+  border-bottom: 1px solid rgba(245, 238, 224, 0.14);
+}
