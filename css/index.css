@@ -10,7 +10,7 @@
       rgba(9, 19, 40, 0.58) 55%,
       rgba(9, 19, 40, 0.28) 100%
     ),
-    url('img\\porto.inicio.jpg') center center / cover no-repeat;
+    url('../img/porto.inicio.jpg') center center / cover no-repeat;
 }
 
 .hero-content {
@@ -81,4 +81,288 @@
   color: var(--texto-claro) !important;
   border-color: var(--azulejo);
 }
- 
+
+.tema-media {
+  border-radius: var(--raio);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+}
+
+.tema-img {
+  /* Mantém proporção vertical próxima da referência sem distorcer */
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
+}
+
+.tema-content {
+  max-width: 620px;
+}
+
+.tema-kicker {
+  font-family: var(--font-texto);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--terracota);
+}
+
+.tema-title {
+  font-family: var(--font-titulos);
+  font-size: clamp(2rem, 3.8vw, 3.1rem);
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--tinta);
+}
+
+.tema-title-accent {
+  font-style: italic;
+  color: var(--tinta);
+}
+
+.tema-copy {
+  font-family: var(--font-texto);
+  font-size: 0.98rem;
+  line-height: 1.75;
+  color: var(--texto-suave);
+}
+
+/* Linha separadora acima dos 3 contadores */
+.tema-stats {
+  border-top: 1px solid var(--linha);
+}
+
+.stat-label {
+  font-family: var(--font-texto);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--texto-suave);
+}
+
+.stat-number {
+  display: inline-block;
+  font-family: var(--font-titulos);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--tinta);
+}
+
+/* Ajustes automáticos quando o tema escuro está ativo */
+[data-bs-theme="dark"] .tema-title,
+[data-bs-theme="dark"] .tema-title-accent,
+[data-bs-theme="dark"] .stat-number {
+  color: var(--texto-claro);
+}
+
+[data-bs-theme="dark"] .tema-copy,
+[data-bs-theme="dark"] .stat-label {
+  color: var(--linha);
+}
+
+[data-bs-theme="dark"] .tema-stats {
+  border-top-color: rgba(245, 238, 224, 0.16);
+}
+
+/* ===================================================
+   SECÇÃO: TRÊS PARA NÃO PERDER
+=================================================== */
+.section-title {
+  font-family: var(--font-titulos);
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 400;
+  color: var(--tinta);
+}
+
+.see-all-link {
+  font-family: var(--font-texto);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--azulejo);
+  text-decoration: none;
+}
+
+.see-all-link:hover {
+  color: var(--terracota);
+  text-decoration: underline;
+}
+
+/* Estilo do Cartão */
+.event-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--linha);
+  border-radius: var(--raio);
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(9, 19, 40, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--sombra);
+}
+
+/* Imagem e Badges */
+.card-img-wrapper {
+  height: 220px;
+  overflow: hidden;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.price-badge {
+  background-color: #FFFFFF;
+  color: var(--noite);
+  font-family: var(--font-texto);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Tipografia Interna do Cartão */
+.event-category {
+  font-family: var(--font-texto);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--azulejo);
+  text-transform: uppercase;
+}
+
+.event-title {
+  font-family: var(--font-titulos);
+  font-size: 1.35rem;
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--noite);
+}
+
+.event-desc {
+  font-family: var(--font-texto);
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--texto-suave);
+}
+
+/* Metadados (Data, Hora, Local) */
+.event-meta {
+  font-family: var(--font-texto);
+  font-size: 0.82rem;
+  color: var(--texto-suave);
+}
+
+.meta-icon {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.event-link {
+  font-family: var(--font-texto);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--terracota);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.event-link:hover {
+  color: var(--tinta);
+  text-decoration: underline;
+}
+
+
+[data-bs-theme="dark"] .section-title {
+  color: var(--texto-claro);
+}
+
+[data-bs-theme="dark"] .event-card {
+  background-color: rgba(245, 238, 224, 0.05);
+  border-color: rgba(245, 238, 224, 0.15);
+}
+
+[data-bs-theme="dark"] .event-title {
+  color: var(--texto-claro);
+}
+
+[data-bs-theme="dark"] .event-desc,
+[data-bs-theme="dark"] .event-meta {
+  color: var(--linha);
+}
+
+[data-bs-theme="dark"] .price-badge {
+  background-color: var(--noite);
+  color: var(--texto-claro);
+  border: 1px solid rgba(245, 238, 224, 0.2);
+}
+
+.card-badges {
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Base para etiquetas de destaque, fora de cena e grátis */
+.badge-custom {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 0.32rem 0.85rem;
+  font-family: var(--font-texto);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  line-height: 1.1;
+  color: var(--texto-claro);
+  box-shadow: 0 3px 10px rgba(9, 19, 40, 0.25);
+}
+
+/* Destaque */
+.badge-destaque {
+  background-color: var(--azulejo);
+  color: var(--texto-claro);
+}
+
+/* Fora de cena */
+.badge-fora {
+  background-color: var(--terracota);
+  color: var(--texto-claro);
+}
+
+/* Grátis */
+.badge-free {
+  background-color: var(--verde);
+  color: var(--texto-claro);
+}
+
+/* Etiqueta de preço no canto superior direito */
+.price-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--cartao);
+  color: var(--noite);
+  border: 1px solid var(--linha);
+  font-family: var(--font-texto);
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.1;
+  padding: 0.34rem 0.85rem;
+  border-radius: 999px;
+  box-shadow: 0 3px 10px rgba(9, 19, 40, 0.22);
+}
+
+/* preços no modo escuro */
+[data-bs-theme="dark"] .price-badge {
+  background-color: var(--noite);
+  color: var(--texto-claro);
+  border-color: rgba(245, 238, 224, 0.28);
+}
