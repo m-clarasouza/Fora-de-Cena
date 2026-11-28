@@ -62,16 +62,62 @@
     </div>
   </header>
 
+  <!-- SECÇÃO: CONTACTO -->
+<section class="row justify-content-center my-5 py-3" aria-labelledby="contactHeading">
+  <div class="col-12 col-md-8 col-lg-6">
 
+  <header class="text-center mb-4">
+      <h1 id="contactHeading" class="display-6 fw-normal">Contacte-nos</h1>
+      <p class="text-body-secondary mb-0">
+        Tens dúvidas ou queres sugerir um evento independente no Porto? Envia-nos uma mensagem.
+      </p>
+    </header>
 
-  <!-- Preencha aqui com seu código -->
-  <main class="flex-grow-1 py-5">
-    <div class="container-fluid px-3 px-md-4 px-lg-5">
-      <!-- Conteúdo específico da página -->
+    <!-- Cartão do formulário (--cartao #F0FAF3 + borda --linha #D9D0BF + raio 16px) -->
+    <div id="contacto" class="card p-4 p-md-4">
+      <form id="contactForm" novalidate>
+
+        <!-- Campo Nome (#contactName) -->
+        <div class="mb-3">
+          <label for="contactName" class="form-label fw-medium">Nome</label>
+          <input type="text" class="form-control" id="contactName" name="nome" placeholder="O teu nome" required>
+          <div class="invalid-feedback">
+            Por favor, preenche o teu nome.
+          </div>
+        </div>
+
+        <!-- Campo Email (#contactEmail) -->
+        <div class="mb-3">
+          <label for="contactEmail" class="form-label fw-medium">Email</label>
+          <input type="email" class="form-control" id="contactEmail" name="email" placeholder="nome@exemplo.pt" required>
+          <div class="invalid-feedback">
+            Por favor, insere um endereço de email válido.
+          </div>
+        </div>
+
+        <!-- Campo Mensagem (#contactMessage) -->
+        <div class="mb-4">
+          <label for="contactMessage" class="form-label fw-medium">Mensagem</label>
+          <textarea class="form-control" id="contactMessage" name="mensagem" rows="4" placeholder="Escreve aqui a tua mensagem..." required></textarea>
+          <div class="invalid-feedback">
+            Por favor, escreve uma mensagem antes de enviar.
+          </div>
+        </div>
+
+        <!-- Botão de envio (Terracota + pill 999px) -->
+        <div class="d-grid d-sm-flex justify-content-sm-end">
+          <button type="submit" class="btn btn-terracota rounded-pill px-4 py-2">
+            Enviar mensagem </button>
+        </div>
+
+        <!-- Parágrafo de feedback dinâmico (#formFeedback) -->
+        <p id="formFeedback" class="mt-3 mb-0 fw-medium" aria-live="polite"></p>
+
+      </form>
     </div>
-  </main>
 
-
+  </div>
+</section>
 
   <!-- Footer -->
   <footer class="site-footer mt-auto">
